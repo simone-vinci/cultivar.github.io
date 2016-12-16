@@ -6,7 +6,9 @@
         'views/welcome.view',
         'views/about.view',
         'views/map.view'
-    ], function (navView, welcomeView, aboutView, mapView) {
+        'views/prize.view'
+        
+    ], function (navView, welcomeView, aboutView, mapView,prizeView) {
         return function ($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise('/home/welcome');
             $stateProvider
@@ -14,6 +16,7 @@
                 .state('home.welcome', welcomeView)
                 .state('home.about', aboutView)
                 .state('home.map', mapView);
+                       .state('home.prize', prizeView);
         };
     });
 }(this.define));
